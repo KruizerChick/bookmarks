@@ -25,7 +25,7 @@ SECRET_KEY = 'nxf=m8wj)cmlrzi!u)h7-xi#0vio9=kopg3m23hr8shmx988gh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mysite.com']
+ALLOWED_HOSTS = ['mysite.com', '127.0.0.1']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # Third-party apps
     'social_django',
+    'sorl.thumbnail',
 
     # Local apps
     'bookmarks.images',
@@ -120,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
