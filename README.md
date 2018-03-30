@@ -15,6 +15,8 @@ This app includes the following features:
 - Ability to "follow" other users
 - An Activity Stream to track what other users are doing.
 - Improved query performance by de-normalizing data (making it redundant) and updating the redundant data using Django signals.
+- Storing and Ranking items using Redis
+
 
 ## Requirements
 
@@ -22,5 +24,19 @@ This Bookmarks app is built with:
 
 - Django 2.0.3
 - Pillow
-- social-auth-app-django
-- sorl-thumbnail
+- [Python Social Auth](https://python-social-auth.readthedocs.io/en/latest/)
+- [sorl-thumbnail](https://sorl-thumbnail.readthedocs.io/en/latest/#)
+- [Redis](https://redis.io/) and [Redis-py](https://redis-py.readthedocs.io/en/latest/)
+
+
+## Notes
+
+### Redis
+To start the Redis server, from the c:\program files\redis directory, type:
+
+    C:\Program Files\Redis> redis-server.exe redis.windows.conf
+
+To use the Redis CLI, open another terminal and type:
+
+    C:\Program Files\Redis> redis-cli.exe
+

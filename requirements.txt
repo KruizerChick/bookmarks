@@ -3,4 +3,5 @@ docutils==0.14
 Pillow==5.0.0
 social-auth-app-django==2.1.0
 sorl-thumbnail==12.4.1
+redis==2.10.6
 

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load thumbnail i18n %}
+
+{% block title %}{% trans 'Images ranking' %}{% endblock %}
+
+{% block content %}
+  <h1>{% trans 'Images ranking' %}</h1>
+  <ol>
+  {% for image in most_viewed %}
+    <li>
+      {% thumbnail image.image "80x80" crop="100%" as im %}
+        <a href="{{ target.get_absolute_url }}">
+          <img src="{{ im.url }}" class="item-img">
+        </a>
+      {% endthumbnail %}
+      <a href="{{ image.get_absolute_url }}">
+        {% trans image.title %}
+      </a>
+    </li>
+    <br>
+  {% empty %}
+  {% endfor %}
+  </ol>
+{% endblock %}
